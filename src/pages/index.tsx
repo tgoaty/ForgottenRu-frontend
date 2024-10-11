@@ -3,8 +3,13 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Loader from "../shared/ui/Loader/Loader.tsx";
 
 const NotFound = lazy(() => import("./NotFound/NotFound.tsx"));
+const Main = lazy(() => import("./Main"));
 
 const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <Main/>
+    },
     {
         path: '*',
         element: <NotFound/>
