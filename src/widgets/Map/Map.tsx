@@ -3,12 +3,12 @@ import styles from "./Map.module.css"
 
 const Map = () => {
     return (
-        <MapContainer className={styles.map} center={[51.505, -0.09]} zoom={13} scrollWheelZoom={true}>
+        <MapContainer className={styles.map} center={[53.350, 83.776]} zoom={16} scrollWheelZoom={false}>
             <TileLayer
 
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={[51.505, -0.09]}>
+            <Marker position={[53.7454, 84.8744]}>
                 <Popup>
                     A pretty CSS3 popup. <br/> Easily customizable.
                 </Popup>
