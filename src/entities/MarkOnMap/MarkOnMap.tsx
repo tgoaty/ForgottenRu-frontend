@@ -2,7 +2,7 @@ import {Marker, Popup} from "react-leaflet";
 import {MarkI} from "../../shared/types/main-types.ts";
 import {FC} from "react";
 
-const Mark: FC<MarkI> = ({id, date, lat, lng, images, title, description}) => {
+const MarkOnMap: FC<MarkI> = ({id, date, lat, lng, images, title, description}) => {
     return (
         <Marker key={id} position={[lat, lng]}>
             <Popup>
@@ -17,4 +17,4 @@ const Mark: FC<MarkI> = ({id, date, lat, lng, images, title, description}) => {
     );
 };
 
-export default Mark;
+export default MarkOnMap;
