@@ -20,7 +20,8 @@ const Map = () => {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             {marks && marks.map((mark) => (
-                <div key={mark.id}><MarkOnMap id={mark.id} lat={mark.lat} lng={mark.lng} date={mark.date} title={mark.title}/></div>))}
+                <div key={mark.id}><MarkOnMap id={mark.id} lat={mark.lat} lng={mark.lng} date={mark.date}
+                                              title={mark.title}/></div>))}
         </MapContainer>
     );
 };

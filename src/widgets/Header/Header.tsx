@@ -1,10 +1,11 @@
 import styles from "./Header.module.css";
+import Search from "../../features/Search/Search.tsx";
 
 const Header = () => {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>ForgottenRu</div>
-            <input className={styles.search} placeholder="Search" />
+            <Search/>
             <button className={styles.profile}>Войти</button>
         </header>
     );
