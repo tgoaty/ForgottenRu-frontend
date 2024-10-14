@@ -10,7 +10,9 @@ const MarkOnMap: FC<MarkI> = ({id, date, lat, lng, images, title, description}) 
                     images !== undefined && <img src={images[0]} alt="image of place"/>
                 }
                 <h3>{title}</h3>
-                <p>{description}</p>
+                {
+                    description !== undefined && <p>{description}</p>
+                }
                 <p>{date}</p>
             </Popup>
         </Marker>
