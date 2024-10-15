@@ -14,7 +14,7 @@ const Map = () => {
     }, [])
 
     return (
-        <MapContainer className={styles.map} center={[53.350, 83.776]} zoom={16} scrollWheelZoom={false}>
+        <MapContainer className={styles.map} center={[53.350, 83.776]} zoom={10} scrollWheelZoom={true}>
             <TileLayer
 
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
