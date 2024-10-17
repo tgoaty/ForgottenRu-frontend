@@ -21,7 +21,7 @@ const Map = () => {
             />
             {marks && marks.map((mark) => (
                 <div key={mark.id}><MarkOnMap id={mark.id} lat={mark.lat} lng={mark.lng} date={mark.date}
-                                              title={mark.title}/></div>))}
+                                              title={mark.title} type={mark.type}/></div>))}
         </MapContainer>
     );
 };

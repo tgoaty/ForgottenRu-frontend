@@ -12,10 +12,18 @@ export interface MarkI {
     lat: number;
     lng: number;
     title: string;
+    type: MarkType;
     description?: string;
     date: string;
     images?: string[];
     comments?: CommentI[];
+}
+
+export enum MarkType {
+    Alone = "Alone",
+    Group = "Group",
+    Urban = "Urban",
+    Cultivated = "Cultivated"
 }
 
 export interface UserI {

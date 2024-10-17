@@ -1,10 +1,22 @@
 import {Marker, Popup} from "react-leaflet";
 import {MarkI} from "../../shared/types/main-types.ts";
 import {FC} from "react";
+import L from "leaflet";
 
-const MarkOnMap: FC<MarkI> = ({id, date, lat, lng, images, title, description}) => {
+const createMarkerIcon = (type: string) => {
+    return new L.Icon({
+        iconUrl: `/markIcons/${type}`,
+        iconSize: [32, 32],
+        iconAnchor: [16, 32],
+        popupAnchor: [0, -32],
+    });
+};
+
+
+const MarkOnMap: FC<MarkI> = ({id, date, lat, lng, images, title, type, description}) => {
+    const markerIcon = createMarkerIcon(type)
     return (
-        <Marker key={id} position={[lat, lng]}>
+        <Marker icon={markerIcon} key={id} position={[lat, lng]}>
             <Popup>
                 {
                     images !== undefined && <img src={images[0]} alt="image of place"/>
